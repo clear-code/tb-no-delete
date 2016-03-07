@@ -5,6 +5,9 @@ const kCID  = Components.ID('{2260c687-d061-4253-8589-8b32a1545943}');
 const kID   = '@clear-code.com/no-delete/startup;1';
 const kNAME = 'NoDeleteStartupService';
 
+const Cc = Components.classes;
+const Ci = Components.interfaces;
+
 Components.utils.import('resource://gre/modules/XPCOMUtils.jsm');
 Components.utils.import('resource://gre/modules/Services.jsm');
 
@@ -59,14 +62,10 @@ NoDeleteStartupService.prototype = {
 		Services.prefs.lockPref(aKey);
 	},
 
-	QueryInterface : function(aIID) 
-	{
-		if(!aIID.equals(Components.interfaces.nsIObserver) &&
-			!aIID.equals(Components.interfaces.nsISupports)) {
-			throw Components.results.NS_ERROR_NO_INTERFACE;
-		}
-		return this;
-	}
+	QueryInterface : XPCOMUtils.generateQI([Ci.nsIObserver]),
+	_xpcom_categories : [
+		{ category : 'profile-after-change', service : true }
+	]
 }; 
  	 
 var gModule = { 
