@@ -32,7 +32,6 @@ NoDeleteStartupService.prototype = {
 
     disableEmptyTrash : function()
     {
-    	var defaultBranch = Services.prefs.getDefaultBranch(null);
     	this.getAccounts().forEach(function(aAccount) {
     		var server = Services.prefs.getCharPref('mail.account.' + aAccount + '.server');
 
@@ -55,9 +54,9 @@ NoDeleteStartupService.prototype = {
 	{
 		if (Services.prefs.prefIsLocked(aKey))
 			Services.prefs.unlockPref(aKey);
+    	var defaultBranch = Services.prefs.getDefaultBranch(null);
 		defaultBranch.setBoolPref(aKey, aValue);
 		Services.prefs.lockPref(aKey);
-		prefBranch.lockPref(aKey);
 	},
 
 	QueryInterface : function(aIID) 
