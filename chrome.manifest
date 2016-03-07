@@ -1,0 +1,13 @@
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+content	no-delete	content/
+
+# This Source Code Form is subject to the terms of the Mozilla Public
+# License, v. 2.0. If a copy of the MPL was not distributed with this
+# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+
+component	{2260c687-d061-4253-8589-8b32a1545943}	components/Startup.js
+contract	@clear-code.com/no-delete/startup;1	{2260c687-d061-4253-8589-8b32a1545943}
+category	profile-after-change	NoDeleteStartupService	@clear-code.com/no-delete/startup;1
