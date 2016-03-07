@@ -46,7 +46,7 @@ NoDeleteStartupService.prototype = {
 	    }, this);
 	},
 
-    getAccounts() : function()
+    getAccounts : function()
     {
 		var accounts = Services.prefs.getCharPref('mail.accountmanager.accounts');
 		accounts = decodeURIComponent(escape(accounts));
