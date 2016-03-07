@@ -6,3 +6,10 @@
 <!ENTITY deleteMsgCmd.accesskey  "T">
 <!ENTITY deleteMsgsCmd.label     "選択したメッセージをごみ箱に移動">
 <!ENTITY deleteMsgsCmd.accesskey "T">
+
+<!ENTITY deleteItem.title     "ごみ箱に移動">
+<!ENTITY deleteButton.label   "ごみ箱に移動">
+<!ENTITY deleteButton.tooltip "メッセージをごみ箱に移動、またはフォルダを削除します">
+
+<!ENTITY hdrTrashButton1.label   "ごみ箱に移動">
+<!ENTITY hdrTrashButton1.tooltip "このメッセージをごみ箱に移動します">

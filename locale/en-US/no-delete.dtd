@@ -6,3 +6,10 @@
 <!ENTITY deleteMsgCmd.accesskey  "T">
 <!ENTITY deleteMsgsCmd.label     "Move Selected Messages to Trash">
 <!ENTITY deleteMsgsCmd.accesskey "T">
+
+<!ENTITY deleteItem.title     "Move to Trash">
+<!ENTITY deleteButton.label   "Move to Trash">
+<!ENTITY deleteButton.tooltip "Move selected messages to Trash, or delete selected folder">
+
+<!ENTITY hdrTrashButton1.label   "Move to Trash">
+<!ENTITY hdrTrashButton1.tooltip "Move this messge to Trash">

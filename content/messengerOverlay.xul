@@ -11,6 +11,14 @@
            valueMessageAccessKey="&deleteMsgCmd.accesskey;"
            valueMessages="&deleteMsgsCmd.label;"
            valueMessagesAccessKey="&deleteMsgsCmd.accesskey;"/>
+  <toolbaritem id="button-delete"
+               title="&deleteItem.title;"/>
+  <toolbarbutton id="button-mark-deleted"
+                 label="&deleteButton.label;"
+                 tooltiptext="&deleteButton.tooltip;"/>
+  <toolbarbutton id="hdrTrashButton"
+                 label="&hdrTrashButton1.label;"
+                 tooltiptext="&hdrTrashButton1.tooltip;"/>
   <menuitem id="menu_emptyTrash"
             disabled="true"
             hidden="true"/>
