@@ -3,8 +3,14 @@
      License, v. 2.0. If a copy of the MPL was not distributed with this
      file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
 <?xml-stylesheet type="text/css" href="./messengerOverlay.css"?>
+<!DOCTYPE overlay SYSTEM "chrome://no-delete/locale/no-delete.dtd">
 <overlay xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
   <script type="application/javascript" src="./messengerOverlay.js"/>
+  <command id="cmd_delete"
+           valueMessage="&deleteMsgCmd.label;"
+           valueMessageAccessKey="&deleteMsgCmd.accesskey;"
+           valueMessages="&deleteMsgsCmd.label;"
+           valueMessagesAccessKey="&deleteMsgsCmd.accesskey;"/>
   <menuitem id="menu_emptyTrash"
             disabled="true"
             hidden="true"/>

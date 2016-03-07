@@ -1,0 +1,8 @@
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+
+<!ENTITY deleteMsgCmd.label      "メッセージをごみ箱に移動">
+<!ENTITY deleteMsgCmd.accesskey  "T">
+<!ENTITY deleteMsgsCmd.label     "選択したメッセージをごみ箱に移動">
+<!ENTITY deleteMsgsCmd.accesskey "T">

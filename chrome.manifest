@@ -4,13 +4,13 @@
 
 content	no-delete	content/
 
-# This Source Code Form is subject to the terms of the Mozilla Public
-# License, v. 2.0. If a copy of the MPL was not distributed with this
-# file, You can obtain one at http://mozilla.org/MPL/2.0/.
+locale	no-delete	en-US	locale/en-US/
+locale	no-delete	ja	locale/ja/
 
 overlay	chrome://messenger/content/messenger.xul	chrome://no-delete/content/messengerOverlay.xul
 overlay	chrome://messenger/content/hiddenWindow.xul	chrome://no-delete/content/messengerOverlay.xul
 overlay	chrome://messenger/content/messageWindow.xul	chrome://no-delete/content/messengerOverlay.xul
+overlay	chrome://messenger/content/messageWindow.xul	chrome://no-delete/content/messageWindowOverlay.xul
 
 component	{2260c687-d061-4253-8589-8b32a1545943}	components/Startup.js
 contract	@clear-code.com/no-delete/startup;1	{2260c687-d061-4253-8589-8b32a1545943}
