@@ -13,3 +13,6 @@
 
 <!ENTITY hdrTrashButton1.label   "ごみ箱に移動">
 <!ENTITY hdrTrashButton1.tooltip "このメッセージをごみ箱に移動します">
+
+<!ENTITY deleteJunk.label     "迷惑メールとマークされたメールをごみ箱に移動">
+<!ENTITY deleteJunk.accesskey "T">

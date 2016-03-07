@@ -19,6 +19,12 @@
   <toolbarbutton id="hdrTrashButton"
                  label="&hdrTrashButton1.label;"
                  tooltiptext="&hdrTrashButton1.tooltip;"/>
+  <menuitem id="appmenu_deleteJunk"
+            label="&deleteJunk.label;"
+            command="cmd_deleteJunk"/>
+  <menuitem id="deleteJunk"
+            label="&deleteJunk.label;"
+            accesskey="&deleteJunk.accesskey;"/>
   <menuitem id="menu_emptyTrash"
             disabled="true"
             hidden="true"/>

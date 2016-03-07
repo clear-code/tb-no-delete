@@ -13,3 +13,6 @@
 
 <!ENTITY hdrTrashButton1.label   "Move to Trash">
 <!ENTITY hdrTrashButton1.tooltip "Move this messge to Trash">
+
+<!ENTITY deleteJunk.label     "Move Mail Marked as Junk in Folder to Trash">
+<!ENTITY deleteJunk.accesskey "T">
