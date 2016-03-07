@@ -2,8 +2,9 @@
 <!-- This Source Code Form is subject to the terms of the Mozilla Public
      License, v. 2.0. If a copy of the MPL was not distributed with this
      file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
+<?xml-stylesheet type="text/css" href="./messengerOverlay.css"?>
 <overlay xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
-  <script type="application/javascript" src="messengerOverlay.js"/>
+  <script type="application/javascript" src="./messengerOverlay.js"/>
   <menuitem id="menu_emptyTrash"
             disabled="true"
             hidden="true"/>
