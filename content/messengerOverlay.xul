@@ -21,7 +21,7 @@
                  tooltiptext="&hdrTrashButton1.tooltip;"/>
   <menuitem id="appmenu_deleteJunk"
             label="&deleteJunk.label;"
-            command="cmd_deleteJunk"/>
+            accesskey="&deleteJunk.accesskey;"/>
   <menuitem id="deleteJunk"
             label="&deleteJunk.label;"
             accesskey="&deleteJunk.accesskey;"/>
