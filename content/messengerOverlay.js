@@ -5,10 +5,22 @@
   Components.utils.import('resource://gre/modules/Services.jsm');
 
   var NoDelete = {
+    get debug() {
+      return Services.prefs.getBoolPref('extensions.no-delete@clear-code.com.debug');
+    },
+
+    log: function(aMessage) {
+      if (!this.debug)
+        return;
+
+     Services.console.logStringMessage('[no-delete] '+aMessage);
+    },
+
     getTargetFolder: function(aFolder) {
       var folders = aFolder ? [aFolder] :
                     gFolderTreeView ? gFolderTreeView.getSelectedFolders() : // messenger.xul
                     gFolderDisplay.displayedFolder ; // messageWindow.xul
+      this.log('target folder: '+(folders.length ? folders[0].folderURL : 'no target'));
       return folders[0];
     },
 
@@ -17,9 +29,12 @@
     },
 
     isInTrash: function(aFolder) {
+      this.log('isInTrash: '+(aFolder ? aFolder.folderURL : 'no target'));
       if (!aFolder)
         return false;
 
+      this.log('  flags     : '+(aFolder.flags));
+      this.log('  trash flag: '+(aFolder.flags & Ci.nsMsgFolderFlags.Trash));
       if (aFolder.flags & Ci.nsMsgFolderFlags.Trash)
         return true;
 
@@ -27,6 +42,7 @@
     },
 
     isCommandDisabled: function(aCommand) {
+      this.log('isCommandDisabled: '+aCommand);
       switch (aCommand) {
         case 'cmd_shiftDelete':
         case 'button_shiftDelete':
