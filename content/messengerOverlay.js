@@ -6,7 +6,9 @@
 
   var NoDelete = {
     getTargetFolder: function(aFolder) {
-      var folders = aFolder ? [aFolder] : gFolderTreeView.getSelectedFolders();
+      var folders = aFolder ? [aFolder] :
+                    gFolderTreeView ? gFolderTreeView.getSelectedFolders() : // messenger.xul
+                    gFolderDisplay.displayedFolder ; // messageWindow.xul
       return folders[0];
     },
 
