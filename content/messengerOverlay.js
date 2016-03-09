@@ -103,6 +103,29 @@
           return DefaultController.__no_delete__doCommand.call(this, aCommand, aTab);
         };
       }
+
+      if ('MessageWindowController' in window) {
+        MessageWindowController.__no_delete__supportsCommand = MessageWindowController.supportsCommand;
+        MessageWindowController.supportsCommand = function(aCommand) {
+          if (NoDelete.isCommandDisabled(aCommand))
+            return false;
+          return MessageWindowController.__no_delete__supportsCommand.call(this, aCommand);
+        };
+
+        MessageWindowController.__no_delete__isCommandEnabled = MessageWindowController.isCommandEnabled;
+        MessageWindowController.isCommandEnabled = function(aCommand) {
+          if (NoDelete.isCommandDisabled(aCommand))
+            return false;
+          return MessageWindowController.__no_delete__isCommandEnabled.call(this, aCommand);
+        };
+
+        MessageWindowController.__no_delete__doCommand = MessageWindowController.doCommand;
+        MessageWindowController.doCommand = function(aCommand, aTab) {
+          if (NoDelete.isCommandDisabled(aCommand))
+            return false;
+          return MessageWindowController.__no_delete__doCommand.call(this, aCommand, aTab);
+        };
+      }
     }
   };
 
