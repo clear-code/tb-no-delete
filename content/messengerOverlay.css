@@ -11,6 +11,8 @@
 #cmd_shiftDelete,
 #menu_delete[disabled="true"],
 #appmenu_delete[disabled="true"],
+#deleteJunk[disabled="true"],
+#appmenu_deleteJunk[disabled="true"],
 #mailContext-delete[disabled="true"] {
   visibility: collapse !important;
 }
