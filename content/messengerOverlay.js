@@ -50,41 +50,41 @@
 
       if ('FolderPaneController' in window) {
         FolderPaneController.__no_delete__supportsCommand = FolderPaneController.supportsCommand;
-        FolderPaneController.supportsCommand = function(aCommand) {
-        if (NoDelete.isCommandDisabled(aCommand))
-          return false;
+          FolderPaneController.supportsCommand = function(aCommand) {
+          if (NoDelete.isCommandDisabled(aCommand))
+            return false;
           return FolderPaneController.__no_delete__supportsCommand.call(this, aCommand);
-      };
+        };
 
         FolderPaneController.__no_delete__isCommandEnabled = FolderPaneController.isCommandEnabled;
         FolderPaneController.isCommandEnabled = function(aCommand) {
-        if (NoDelete.isCommandDisabled(aCommand))
-          return false;
+          if (NoDelete.isCommandDisabled(aCommand))
+            return false;
           return FolderPaneController.__no_delete__isCommandEnabled.call(this, aCommand);
-      };
+        };
       }
 
       if ('DefaultController' in window) {
         DefaultController.__no_delete__supportsCommand = DefaultController.supportsCommand;
         DefaultController.supportsCommand = function(aCommand) {
-        if (NoDelete.isCommandDisabled(aCommand))
-          return false;
+          if (NoDelete.isCommandDisabled(aCommand))
+            return false;
           return DefaultController.__no_delete__supportsCommand.call(this, aCommand);
-      };
+        };
 
         DefaultController.__no_delete__isCommandEnabled = DefaultController.isCommandEnabled;
         DefaultController.isCommandEnabled = function(aCommand) {
-        if (NoDelete.isCommandDisabled(aCommand))
-          return false;
+          if (NoDelete.isCommandDisabled(aCommand))
+            return false;
           return DefaultController.__no_delete__isCommandEnabled.call(this, aCommand);
-      };
+        };
 
         DefaultController.__no_delete__doCommand = DefaultController.doCommand;
         DefaultController.doCommand = function(aCommand, aTab) {
-        if (NoDelete.isCommandDisabled(aCommand))
-          return false;
+          if (NoDelete.isCommandDisabled(aCommand))
+            return false;
           return DefaultController.__no_delete__doCommand.call(this, aCommand, aTab);
-      };
+        };
       }
     }
   };
