@@ -19,7 +19,7 @@
     getTargetFolder: function(aFolder) {
       var folders = aFolder ? [aFolder] :
                     gFolderTreeView ? gFolderTreeView.getSelectedFolders() : // messenger.xul
-                    gFolderDisplay.displayedFolder ; // messageWindow.xul
+                    [gFolderDisplay.displayedFolder] ; // messageWindow.xul
       this.log('target folder: '+(folders.length ? folders[0].folderURL : 'no target'));
       return folders[0];
     },
