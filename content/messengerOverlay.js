@@ -50,6 +50,7 @@
 
         case 'cmd_delete':
         case 'button_delete':
+        case 'cmd_deleteJunk':
           return this.isInTrash(this.getTargetFolder());
       }
 
